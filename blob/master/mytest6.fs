@@ -12,5 +12,6 @@ let rec occFromIth = fun (s,n,c) ->
    | true  ->  1
    | false ->  0
   match (s,n,c) with
-   | (s,l,c) when l = String.length s  -> 0
+   | (s,l,c) when l = String.length s -> 0
+   | (s,q,c) when q > String.length s -> 0
    | (s,n,c)  -> bti((string(s)).[n] = c) + occFromIth (s,n+1,c) 
