@@ -5,7 +5,5 @@ let curry f =
     g
     
 let uncurry g = 
-    let f (x,y) = h y
-        let h = g x
-        h
-    f
+        let f (x, y) = g x y
+        f
