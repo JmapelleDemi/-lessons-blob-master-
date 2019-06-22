@@ -55,4 +55,5 @@ let rec zip (xs1,xs2) =
   else
   match (xs1,xs2) with
   | ([],[])                     -> []
+  | (_,[]) | ([],_)             -> []
   | (headx::tailx,heady::taily) -> (headx,heady) :: zip (tailx,taily)
