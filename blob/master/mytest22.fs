@@ -13,6 +13,6 @@ let tl (s : 'a cell) : Lazy<'a cell> =
 // 51.3
 let rec nth (s : 'a cell) (n : int) : 'a =
    match n with
-   | 1            -> hd s
+   | 0            -> hd s
    | n when n > 1 -> nth ((tl s).Force()) (n - 1)
    | _            -> failwith "Input positive value"
